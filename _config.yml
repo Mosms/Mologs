@@ -26,11 +26,11 @@ baseurl: # the subpath of your site, e.g. /blog
 title: Mologs
 description: "Mosms's mologs for life itself and the original world."
 keywords: 'Mosms,world,blog'
-author:
-  name:
+author: 
+  name: Bo Fu
   job_title:
   location:
-  email:
+  email: bfurthe@gmail.com
   social_links:
     - name: facebook
       url:
