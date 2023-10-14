@@ -21,4 +21,4 @@ First, I'll say hello to the github page for mologs' supports.
 
 This is my personal homepage: [B. Fu’s Homepage](https://mosms.github.io/), you can contract me by the way posted here.
 
-For PDF seeing, we can try this: [A lecture about Markov Chains](/assets/files/pdf/Lecture2.pdf).
+For PDF seeing, we can try this: [A lecture about Markov Chains](https://mosms.github.io/Mologs/assets/files/pdf/Lecture2.pdf).
