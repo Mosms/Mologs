@@ -23,7 +23,7 @@ sass:
 # Site Data
 url: https://mosms.github.io # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: /Mologs # the subpath of your site, e.g. /blog
-favicon: ${url}${baseurl}/assets/images/mologo.png
+favicon: /assets/images/mologo.png
 title: Mologs
 description: "Mosms's mologs for life itself and the original world."
 keywords: 'Mosms,world,blog'
