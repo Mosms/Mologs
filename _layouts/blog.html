@@ -6,17 +6,6 @@
 <!--[if gt IE 8]><!-->
 <html class="no-js" lang="{{ site.lang }}">
 <!--<![endif]-->
-
-<head>
-    {% include common/meta.html %}
-    <link href='{{ site.baseurl }}/assets/stylesheets/blog.css' rel="stylesheet" type="text/css">
-    <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/favicons/mologo.png" sizes="32x32">
-    {% include common/libraries.html %}
-    {% if site.google_tag_manager %}
-        {% include common/gtm-head.html %}
-    {% endif %}
-</head>
-
 <script src="https://unpkg.com/feather-icons"></script>
 <script type="text/javascript" async
     src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
@@ -29,6 +18,16 @@
         }
     });
 </script>
+
+<head>
+    {% include common/meta.html %}
+    <link href='{{ site.baseurl }}/assets/stylesheets/blog.css' rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/favicons/mologo.png" sizes="32x32">
+    {% include common/libraries.html %}
+    {% if site.google_tag_manager %}
+        {% include common/gtm-head.html %}
+    {% endif %}
+</head>
 
 <body>
     {% if site.google_tag_manager %}
