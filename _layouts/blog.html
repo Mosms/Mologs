@@ -9,24 +9,15 @@
 
 <head>
     {% include common/meta.html %}
+    {% if site.load_math_jax %}
+        {% include common/math-jax.html %}
+    {% endif %}
     <link href='{{ site.baseurl }}/assets/stylesheets/blog.css' rel="stylesheet" type="text/css">
     {% include common/libraries.html %}
     {% if site.google_tag_manager %}
         {% include common/gtm-head.html %}
     {% endif %}
     <link rel="home-in-icon" href="{{ site.url }}{{ site.baseurl }}{{ site.favicon }}">
-    <script src="https://unpkg.com/feather-icons"></script>
-    <script type="text/javascript" async
-    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-    </script>
-    <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-            inlineMath: [['$','$']],
-        }
-    });
-    </script>
 </head>
 
 <body>

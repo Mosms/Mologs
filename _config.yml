@@ -56,6 +56,8 @@ blog:
   cc_license_image: /assets/images/theme/cc-by-sa.png # An image of your CC License. 
   footer_content: Mosms's mologs for life itself and the original world.
 
+load_math_jax: true #true to turn it on.
+
 disqus:
   shortname: # e.g. yizeng
   public_key: # e.g. ULZ0b9TFefCUJHKQd4JCKv2v3u27YoG7YG8zXPewkWrT333Z0Se9YnxLzoV6VM8W
