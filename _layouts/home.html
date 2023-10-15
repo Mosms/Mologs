@@ -10,11 +10,23 @@
 <head>
     {% include common/meta.html %}
     <link href='{{ site.baseurl }}/assets/stylesheets/home.css' rel="stylesheet" type="text/css">
-    <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/favicons/mologo.png" sizes="32x32">
     {% include common/libraries.html %}
     {% if site.google_tag_manager %}
         {% include common/gtm-head.html %}
     {% endif %}
+    <link rel="home-in-icon" href="{{ site.favicon }}">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            inlineMath: [['$','$']],
+        }
+    });
+    </script>
 </head>
 
 <body>
