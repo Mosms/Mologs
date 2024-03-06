@@ -23,7 +23,7 @@ $$
 \mathbf{P}\left(X_{t+1}=y\mid X_{t}=x \right)
 \label{eq:Markov Property.}
 $$
-where property $\left(\ref{eq:Markov Property.}\right)$ is also called **Markov property**.
+where property $$\left(\ref{eq:Markov Property.}\right)$$ is also called **Markov property**.
 
 + 一个中文成语可以贴切形象地形容这种性质：步步为营。
 
