@@ -14,16 +14,15 @@ Last Updated: 2024/3/6
 
 [Markov Chains](#Markov Chains), [Random Mapping Representation](#Random Mapping Representation), [Irreducibility and Aperiodicity](#Irreducibility and Aperiodicity)
 
-## Markov Chains
+## Markov Chains<a id="Markov Chains"></a>
 
 **Markov Chain** is a sequence of random variables $\left(X_{1},X_{2},\ldots\right)$ with **state space** $\mathcal{X}$ and **transition matrix** $P$, which satisfies that for all $x,y\in\mathcal{X}$, all $t\in\mathbb{N}^{+}$, and all events $H_{t-1}=\bigcap_{s=0}^{t-1}\left\{X_{s}=s_{s}\right\}$ satisfying $\mathbf{P}\left(H_{t-1}\cap \left\{X_{t}=x \right\} \right)$, 
 $$
 \mathbf{P}\left(X_{t+1}=y\mid H_{t-1}\cap\left\{X_{t}=x \right\} \right)
 =
 \mathbf{P}\left(X_{t+1}=y\mid X_{t}=x \right)
-\label{eq:Markov Property.}
 $$
-where property $$\left(\ref{eq:Markov Property.}\right)$$ is also called **Markov property**.
+which property is also called **Markov property**.
 
 + 一个中文成语可以贴切形象地形容这种性质：步步为营。
 
@@ -32,7 +31,7 @@ where property $$\left(\ref{eq:Markov Property.}\right)$$ is also called **Marko
 + $\mathbf{P}_{\mu}$, $\mathbf{E}_{\mu}$. (meanning: $\mu_{0}=\mu$)
 + $\mathbf{P}_{x}:=\mathbf{P}_{\delta_{x}}$, $\mathbf{E}_{x}:=\mathbf{E}_{\delta_{x}}$.
 
-## Random Mapping Representation
+## Random Mapping Representation<a id="Random Mapping Representation"></a>
 
 A **random mapping representation** of a transition matrix $P$ on state space $\mathcal{X}$ is a function $f:\mathcal{X}\times \Lambda\to\mathcal{X}$, along with a $\Lambda$-valued random variable $Z$, satisfying
 $$
@@ -47,7 +46,7 @@ $$
 
   证明就是构造随机变量。（Construction of Arbitrary Random Variables）
 
-## Irreducibility and Aperiodicity
+## Irreducibility and Aperiodicity<a id="Irreducibility and Aperiodicity"></a>
 
 A chain $P$ is called **irreducible** **iff**
 $$
