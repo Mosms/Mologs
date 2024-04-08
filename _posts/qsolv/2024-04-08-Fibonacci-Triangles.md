@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Triangles' Searching By Fibonacci"
-description: "An algorithm problem about Triangle Searching which can be solved by Fibonacci."
+title: "Triangle's Existence By Fibonacci"
+description: "An algorithm problem about Triangle's Existence which can be solved by Fibonacci."
 categories: [Algorithm-Problems]
 tags: [Algorithm, ACM]
 redirect_from:
