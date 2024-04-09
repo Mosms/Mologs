@@ -5,7 +5,7 @@ description: "An algorithm problem about Triangle's Existence which can be solve
 categories: [Algorithm-Problems]
 tags: [Algorithm, ACM]
 redirect_from:
-  - /2023/04/08/
+  - /qsolv/
 ---
 
 * Kramdown table of contents

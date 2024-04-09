@@ -5,7 +5,7 @@ description: "Introductions to Mologs in details by Mosms."
 categories: [About-Mologs]
 tags: [Introduction, Mologs]
 redirect_from:
-  - /2023/10/14/
+  - /hellogs/
 
 ---
 
