@@ -8,19 +8,19 @@ redirect_from:
   - /QAsolv/fib-triangle/
 ---
 * Kramdown table of contents
-  {:toc .toc}
+{:toc .toc}
 
 Last Updated: 2024/04/08
 
-# Problem
+# 问题描述 Problem
 
 Given an **unordered** nonnegative-integer-valued ($0\leq val\leq\mathrm{max}_ {\mathrm{long\ long}}$) array $a$ with length being $n$ ($1\leq n\leq 10^{6}$), our task is to finish $m$ ($1\leq m\leq 10^{5}$) queries, each of which contains a (discrete) interval $\left[l,r\right]$, and its expected answer is whether the set of $a_{\left[l,l+1,\ldots,r\right]}$ contains three integers which can construct a triangle.
 
 给定一个大小只多为 1e6 的无序非负数组，数组值以 long long 最大值为上限，任务是完成至多 1e5 次查询，每次查询包括一个（双向闭）区间，查询答案是这个区间内是否存在三个整数可以构成一个合法三角形。
 
-# Solutions
+# 分析&解法 Solutions
 
-## Brute Force
+## 朴素暴力算法 Brute Force
 
 The trivial **Brute Force** Algorithm can solve it with complexity $O\left(mn^{3}\right)$.
 
@@ -28,7 +28,7 @@ The trivial **Brute Force** Algorithm can solve it with complexity $O\left(mn^{3
 
 代码很朴素，便不再放上来了。
 
-## Modified Brute Force
+## 优化暴力 Modified Brute Force
 
 We can improve the way of testing whether there is a legal tripule by first sorting the values in given interval and then testing linearly. Using this strategy and $O\left(n\log n\right)$ sorting algorithm, the final complexity can be improved to $O\left(mn\log n\right)$.
 
@@ -82,7 +82,7 @@ int main() {
 }
 ```
 
-## Eliminating Long Intervals' Query By Fibonacci
+## 消除长序列查询 Eliminating Long Intervals' Query By Fibonacci
 
 Then here comes the best part of my solution: we can obtain that when this interval of array has no 0, the probability that there is no solution will become (almost **exponentially**) smaller with the increasing of the interval's length.
 
@@ -192,13 +192,13 @@ int main() {
 }
 ```
 
-## More Possible Improvments
+## 更多可能的优化 More Possible Improvement
 
 这样的结果已经足够通过任何以 1s 为限的判题机，但是我们也可以思考是否可以有一些实现上的优化。
 
 我的想法是空间换时间，在每个索引记录最短的有合法解的序列右端，每次暴力都更新。但是实际上，这对复杂度以及运行时间几无提升，因此不再赘述。
 
-# Look Back
+# 回看&总结 Look Back
 
 这道题来自于某企业的机试题，同学在网上查不到于是来问，我一开始想的分块，慢慢地思路转变乃顺利解决。而后觉得这个思路很好，便写下这篇博客以记录，通过文字的方式写下来感觉思路更加清晰了，只能说这道题挺有迷惑性吧。
 

@@ -15,7 +15,7 @@ redirect_from:
 
 # 微积分/数学分析篇 Calculus/Analysis
 
-# Before All
+# 开始之前 Before All
 
 所用教材为**梅加强《数学分析》**。
 
