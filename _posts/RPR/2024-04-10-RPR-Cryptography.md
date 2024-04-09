@@ -5,11 +5,13 @@ description: "Cryptography Review for Postgraduate Recommendation"
 categories: [RPR-Review-for-Postgraduate-Recommendation]
 tags: [Review for Postgraduate Recommendation, Cryptography]
 redirect_from:
-  - /RPR/crpto/
+  - /RPR/crypto/
 ---
 
 * Kramdown table of contents
 {:toc .toc}
+
+开始之前，你可能需要看一下有关此系列博客的介绍 [RPR: Before All. Introduction](/Mologs/RPR/intro/) 。
 
 
 # 密码学篇 Cryptography
