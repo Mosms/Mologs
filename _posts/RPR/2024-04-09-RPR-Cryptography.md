@@ -61,7 +61,7 @@ More advanced usages/functionalities are provided as cryptographic protocols, e.
 
   一个简单的单字母双射，逆函数也是双射。
 
-  + Key Space $26! \approx 2^{88}$，至少目前来看穷举是不太行了。
+  + Key Space $26! \approx 2^{88}$，目前来看至少穷举是不太行了。
   + 但是有其他有效攻击方式，例如利用单字母的对应关系始终不变而进行的统计攻击。
     + 可以攻击特定字母的分布频率，信息越长成功概率越高，例如攻击元音字符。
 
