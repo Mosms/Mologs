@@ -5,12 +5,10 @@ description: "An algorithm problem about Triangle's Existence which can be solve
 categories: [Algorithm-Problems]
 tags: [Algorithm, ACM]
 redirect_from:
-  - /qsolv/
+  - /QAsolv/fib-triangle/
 ---
-
 * Kramdown table of contents
-{:toc .toc}
-
+  {:toc .toc}
 
 Last Updated: 2024/04/08
 
@@ -59,11 +57,11 @@ int main() {
         cin >> l >> r;
         int len = r - l + 1;
         bool succ = false;
-        
+      
         // Next Solve it
         memcpy(judge, a + l, sizeof(ll) * len);
         sort(judge, judge + len);
-        
+      
         for (int i = 0; i + 2 < len; i++) {
             if (judge[i] == 0) continue;
             if (judge[i+2] < judge[i] + judge[i+1]) {
@@ -71,7 +69,7 @@ int main() {
                 break;
             }
         }
-        
+      
         if (succ) {
             cout << "YES" << endl;
         }
@@ -79,14 +77,14 @@ int main() {
             cout << "NO" << endl;
         }
     }
-    
+  
 	return 0;
 }
 ```
 
 ## Eliminating Long Intervals' Query By Fibonacci
 
-Then here comes the best part of my solution: we can obtain that when this interval of array has no 0, the probability that there is no solution will become (almost **exponentially**) smaller with the increasing of the interval's length. 
+Then here comes the best part of my solution: we can obtain that when this interval of array has no 0, the probability that there is no solution will become (almost **exponentially**) smaller with the increasing of the interval's length.
 
 Let's prove this property more rigorously. This is done by **Fibonacci Sequence**, when this interval of array has no solution, we can claim $a_ {i+2}\geq a_ {i+1}+a_ {i}$ for all legal $i$ in $\left[l,r\right]$, so the increasing of value must be (at least) as exponential as Fibonacci sequence. And for a 1-1-started Fibonacci sequence $F$, we can prove[^1]:
 
@@ -146,7 +144,7 @@ int main() {
     for (int i = 1; i <= n; i++) {
         cin >> a[i];
     }
-    
+  
     // pre-processing
     for (int i = 1; i <= n; i++) {
         z0a_idx[i] = z0a_top;
@@ -154,13 +152,13 @@ int main() {
             z0a[z0a_top++] = a[i];   
         }
     }
-    
+  
     for (int __t = 0; __t < m; __t++) {
         int l, r;
         cin >> l >> r;
         int len = r - l + 1;
         bool succ = false;
-        
+      
         int l_idx = z0a_idx[l], r_idx = z0a_idx[r];
         if (a[r] == 0) r_idx--;
         int z0len = r_idx - l_idx + 1;
@@ -169,11 +167,11 @@ int main() {
             cout << "YES" << endl;
             continue;
         }
-        
+      
         // Else Solve it
         memcpy(judge, z0a + l_idx, sizeof(ll) * z0len);
         sort(judge, judge + z0len);
-        
+      
         for (int i = 0; i + 2 < z0len; i++) {
             if (judge[i] == 0) continue;
             if (judge[i+2] < judge[i] + judge[i+1]) {
@@ -181,7 +179,7 @@ int main() {
                 break;
             }
         }
-        
+      
         if (succ) {
             cout << "YES" << endl;
         }
@@ -189,7 +187,7 @@ int main() {
             cout << "NO" << endl;
         }
     }
-    
+  
 	return 0;
 }
 ```
@@ -208,5 +206,4 @@ int main() {
 
 另，代码**未经验证**，很有可能有手糊情况出现，欢迎大家纠正。
 
-[^1]: 这学期《组合数学》里正好有一个生成函数的证明，链接如下 [NJU TCS Link of Generating Function Proof on Fibonacci Sequence.](https://tcs.nju.edu.cn/wiki/index.php?title=%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6_(Fall_2024)/Generating_functions#:~:text=balls.-,Fibonacci%20numbers,-Consider%20the%20following) 
-
+[^1]: 这学期《组合数学》里正好有一个生成函数的证明，链接如下 [NJU TCS Link of Generating Function Proof on Fibonacci Sequence.](https://tcs.nju.edu.cn/wiki/index.php?title=%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6_(Fall_2024)/Generating_functions#:~:text=balls.-,Fibonacci%20numbers,-Consider%20the%20following)

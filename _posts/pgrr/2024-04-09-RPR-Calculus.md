@@ -5,13 +5,13 @@ description: "Calculus Review for Postgraduate Recommendation"
 categories: [RPR-Review-for-Postgraduate-Recommendation]
 tags: [Review for Postgraduate Recommendation, Math]
 redirect_from:
-  - /pgrr/
+  - /RPR/calculus/
 ---
 
 * Kramdown table of contents
 {:toc .toc}
 
-开始之前，你可能需要看一下有关此系列博客的介绍 [RPR: Before All. Introduction](/Mologs/blog/2024/04/09/RPR-Intro/) 。
+开始之前，你可能需要看一下有关此系列博客的介绍 [RPR: Before All. Introduction](/Mologs/RPR/intro/) 。
 
 # 微积分/数学分析篇 Calculus/Analysis
 
