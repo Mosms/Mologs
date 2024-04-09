@@ -57,4 +57,15 @@ More advanced usages/functionalities are provided as cryptographic protocols, e.
     + Any secure encryption scheme must have a key space that is not vulnerable to exhaustive search.
     + 至少穷举不行，不然暴力搜索就已经是一个可行解算法了。
 
-  单字母替换密码（The Mono-alphabetic Substitution Cipher）
++ 单字母替换密码（The Mono-alphabetic Substitution Cipher）**MAS**
+
+  一个简单的单字母双射，逆函数也是双射。
+
+  + Key Space $26! \approx 2^{88}$，至少目前来看穷举是不太行了。
+  + 但是有其他有效攻击方式，例如利用单字母的对应关系始终不变而进行的统计攻击。
+    + 可以攻击特定字母的分布频率，信息越长成功概率越高，例如攻击元音字符。
+
++ 多字母替换密码（Poly-alphabetic Substitution Cipher）**PAS**
+
+  
+
