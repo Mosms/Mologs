@@ -118,7 +118,7 @@ More advanced usages/functionalities are provided as cryptographic protocols, e.
      + 可证明的安全不一定代表现实中的应用安全。
      + 不一定是个缺点，这使得我们可以集中于已有的假设，并专心攻克。
 
-## 柯克霍夫原则 Kerckhoffs’ Principle
+## 柯克霍夫原则 Kerckhoffs' Principle
 
 The cipher method must not be required to be secret, and it must be able to fall into the hands of the enemy without inconvenience.
 
@@ -128,5 +128,72 @@ The cipher method must not be required to be secret, and it must be able to fall
 
 # 完美保密性 Perfect Secrecy
 
+## 前置知识 概率
 
++ 概率的定义、条件概率
++ 点对独立（Pairwise Independent）、相互独立（Mutually Independent）
++ 全概率公式（Total Probability Formula (or law)）
++ 贝叶斯定理（Bayes' Theorem）
 
+## 加密方法 Encryption Scheme
+
+A **encryption scheme** $\Pi$, also called a **cipher** or a **cryptosystem**, is defined by three algorithms $\mathbf{Gen}$, $\mathbf{Enc}$, and $\mathbf{Dec}$, as well as a specification of a finite message space $\mathcal{M}$ with $size(\mathcal{M}) >1$.
+
++ $\mathbf{Gen}$ 为随机化的密钥生成函数，概率性地从有限的密钥空间 $\mathcal{K}$ 中取出一个密钥 $k$ 用于加密。
++ $c:=\mathbf{Enc}_ {k} (m  )$
++ $m:=\mathbf{Dec}_ {k} (c )$
+
+## 完美保密性 Perfect Secrecy
+
+An encryption scheme $ (\mathbf{Gen},\mathbf{Enc},\mathbf{Dec} )$ over a massage space $\mathcal{M}$ is **perfect secret** if for every possible distribution over $\mathcal{M}$,
+
+$$
+Pr (M = m\mid C = c ) = Pr (M = m )
+$$
+
+holds for every $m \in \mathcal{M}$ and every $c \in \mathcal{C}$ that $Pr (C = c ) > 0$.
+
++ 完美保密性的本质：密文不提供任何有关明文的信息，但是请注意这里仅局限于单个明文-密文的对应，其实仅仅是对加密过程的安全性进行了限制。
+
+### 引理 完美保密性的等价表达
+
+完美保密等价于
+
+$$
+Pr ( C = c\mid M = m ) = Pr ( C = c\mid M = m'  )
+$$
+
++ This formulation states that the probability distribution over $\mathcal{C}$ is **independent** of the plaintext.
++ 其证明是对条件概率和全概率法则的生动应用。
+
+## 敌手完美不可区分性 Perfect Adversarial Indistinguishability
+
++ 对手 $\mathcal{A}$，选择一对明文 $ (m_{0}, m_{1} )$，发送给挑战者，挑战者选择密钥，随机选择明文对中的一个并加密为密文发送给对手，对手返回猜测的解密结果，如果相等则成功。整个攻击事件表示为 $\mathrm{PrivK}_{A, \Pi}^{eav}$， 为 $1$ 则成功，反之失败。
+
+相应地，完美不可区分性则定义为 $Pr (\mathrm{PrivK}_ {A, \Pi}^{eav}=1 )=\frac{1}{2}$ 的加密方法。
+
++ The definition states that every adversary would do no better or worse in the game than making a uniformly random guess.
+
+  无论对手做什么，成功概率和乱猜都没区别。
+
+### 引理 完美保密性和敌手完美不可区分性
+
+**Perfect Secrecy** holds if and only if it is **Perfect Adversarial Indistinguishability** holds.
+
+## 例子 One-time Pad
+
+长度固定的随机比特串，直接亦或以加密或解密。
+
++ 具有完美保密性；
++ 其问题在于密钥要求和信息一样长，安全性只有在使用一次时才能保证且但凡同时拥有一对明密文就会被直接攻破。
+
+## 限制性
+
+**定理**：完美保密的加密方法中，一定有密钥空间大于明文空间。
+
+## 香农定理
+
+如果我们有 $size(\mathcal{M}) = size(\mathcal{C}) = size(\mathcal{K})$，那么加密方法的完美保密性有充要条件：
+
+1. 密钥等概率生成
+2. 密钥与明-密文对具有一一对应性。
