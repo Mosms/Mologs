@@ -6,6 +6,7 @@ categories: [RPR-Review-for-Postgraduate-Recommendation]
 tags: [Review for Postgraduate Recommendation, Cryptography]
 redirect_from:
   - /RPR/crypto/
+highlight: "密码安全，也可以形式化定义。"
 ---
 
 * Kramdown table of contents

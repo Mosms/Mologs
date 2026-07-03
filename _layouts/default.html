@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="{{ page.lang | default: site.lang }}">
+  <head>
+    {% include head.html %}
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到正文</a>
+    {% include site-header.html %}
+    <main id="main" class="site-main">
+      {{ content }}
+    </main>
+    {% include site-footer.html %}
+  </body>
+</html>
+

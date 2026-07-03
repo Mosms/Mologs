@@ -1,0 +1,9 @@
+{% assign post = include.post %}
+<li class="post-row">
+  <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y.%m.%d' }}</time>
+  <div>
+    <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+    {% if post.description %}<p>{{ post.description }}</p>{% elsif post.excerpt %}<p>{{ post.excerpt | strip_html | strip_newlines | truncate: 120 }}</p>{% endif %}
+    <p class="post-taxonomy">{% for category in post.categories %}{% assign category_slug = category | slugify %}<a href="{{ '/blog/categories/#' | append: category_slug | relative_url }}">{{ category }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}</p>
+  </div>
+</li>

@@ -2,6 +2,8 @@
 .bundle
 .sass-cache
 _site
+.jekyll-cache
+.jekyll-metadata
 Gemfile.lock
 
 Thumbs.db
@@ -10,6 +12,7 @@ Thumbs.db
 .rbenv-version
 .rvmrc
 /node_modules
+/vendor
 /yarn-error.log
 yarn.lock
 

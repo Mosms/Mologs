@@ -1,28 +1,17 @@
 ---
 layout: page
-title: Tags
-header: Posts By Tag
-description: "This page shows a list of tags used in this blog."
-group: navigation
+title: 标签
+section: 索引
+description: 更细粒度的文章主题。
 ---
-{% capture tags %}
-    {% for tag in site.tags %}
-        {{ tag[0] | replace:' ','&#32;' }}
-    {% endfor %}
-{% endcapture %}
-
-{% assign sorted_tags = tags | split:' ' | sort %}
-
-<ul class="tag_box tags inline">
-    {% assign tags_list = sorted_tags %}
-    {% include helpers/tags_list %}
-</ul>
-
-{% for tag in sorted_tags %}
-    {% assign actual_tag_name = tag | replace:'&#32;',' ' %}
-    <h3 id="{{ actual_tag_name | replace:' ','-' | replace:'#','sharp' }}">{{ actual_tag_name }}</h3>
-    <ul class="post-list">
-        {% assign pages_list = site.tags[actual_tag_name] %}
-        {% include helpers/pages_list %}
-    </ul>
+{% assign tags = site.tags | sort %}
+<nav class="term-cloud" aria-label="标签快速导航">
+  {% for tag in tags %}<a href="#{{ tag[0] | slugify }}">{{ tag[0] }} <sup>{{ tag[1].size }}</sup></a>{% endfor %}
+</nav>
+{% for tag in tags %}
+<section class="term-section">
+  <h2 id="{{ tag[0] | slugify }}">{{ tag[0] }}</h2>
+  <ul class="compact-list">{% for post in tag[1] %}<li><time>{{ post.date | date: '%Y.%m.%d' }}</time><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>{% endfor %}</ul>
+</section>
 {% endfor %}
+
