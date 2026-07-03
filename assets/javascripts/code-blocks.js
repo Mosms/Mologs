@@ -96,7 +96,9 @@
       var style = window.getComputedStyle(code);
       var lineHeight = parseFloat(style.lineHeight);
       var rect = code.getBoundingClientRect();
-      var offset = event.clientY - rect.top + pre.scrollTop;
+      // The code rectangle already moves with the pre element's scroll offset.
+      // Adding scrollTop again would count the scroll twice and shift the active line.
+      var offset = event.clientY - rect.top;
       return Math.max(1, Math.min(lineCount, Math.floor(offset / lineHeight) + 1));
     }
 
