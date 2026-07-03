@@ -15,6 +15,7 @@ author:
 permalink: /blog/:year/:month/:day/:title/
 future: false
 show_excerpts: true
+code_max_lines: 24
 
 markdown: kramdown
 kramdown:
