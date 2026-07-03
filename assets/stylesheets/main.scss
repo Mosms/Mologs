@@ -46,4 +46,7 @@ mjx-container,mjx-container *{-webkit-user-select:text;user-select:text}
 :root[data-theme="light"]{color-scheme:light;--paper:#fbfcfd;--ink:#26384a;--muted:#68798a;--navy:#043361;--link:#288fbd;--line:#dce5eb;--soft:#f1f5f7;--code:#183048}
 :root[data-theme="dark"]{color-scheme:dark;--paper:#20212b;--ink:#dadbdf;--muted:#a7b0bd;--navy:#6fc8ef;--link:#3eb7f0;--line:#39414e;--soft:#2b2d38;--code:#151b24}
 :root[data-theme="dark"] a:hover{color:#8bd8f7}
+a strong,a b{color:inherit}
+.theme-toggle{border:0;border-radius:0;box-shadow:none;background:none}
+.theme-toggle:focus-visible{outline:0;box-shadow:0 2px 0 currentColor}
 @media print{.site-header,.site-footer,.post-aside,.post-nav{display:none}.page-shell{padding:0}.post-grid{display:block}body{background:#fff;color:#222}}

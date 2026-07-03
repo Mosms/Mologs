@@ -53,9 +53,6 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
-  - starter-kit
   - vendor
   - README.md
   - "*.gem"
-  - "*.gemspec"
-

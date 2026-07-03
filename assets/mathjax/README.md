@@ -5,6 +5,9 @@ This directory contains the browser-ready CommonHTML build from
 and WOFF2 files. It is served locally so mathematical rendering and fonts do
 not depend on a font CDN.
 
+The local `sre/` directory contains MathJax's Speech Rule Engine worker and
+language maps used for accessible spoken mathematics.
+
 New Computer Modern was selected to match the traditional mathematical
 typesetting used by contemporary LaTeX papers.
 
