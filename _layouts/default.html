@@ -1,9 +1,10 @@
+{% assign document_lang = page.lang | default: site.lang | default: 'en-US' %}
 <!doctype html>
-<html lang="{{ page.lang | default: site.lang }}">
+<html lang="{{ document_lang }}">
   <head>
     {% include head.html %}
   </head>
-  <body>
+  <body class="{% if document_lang == 'zh-CN' %}lang-zh{% else %}lang-en{% endif %}">
     <a class="skip-link" href="#main">跳到正文</a>
     {% include site-header.html %}
     <main id="main" class="site-main">
@@ -12,4 +13,3 @@
     {% include site-footer.html %}
   </body>
 </html>
-

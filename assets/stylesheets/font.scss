@@ -1,0 +1,80 @@
+---
+---
+
+{% assign font_version = site.time | date: '%s' %}
+
+@font-face {
+  font-family: "Crimson Pro Local";
+  src: url("{{ '/assets/fonts/crimson-pro.woff2' | relative_url }}?v={{ font_version }}") format("woff2");
+  font-style: normal;
+  font-weight: 200 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Crimson Pro Local";
+  src: url("{{ '/assets/fonts/crimson-pro-italic.woff2' | relative_url }}?v={{ font_version }}") format("woff2");
+  font-style: italic;
+  font-weight: 200 900;
+  font-display: swap;
+}
+
+/* Optical match used only by .lang-zh. */
+@font-face {
+  font-family: "Crimson Pro CJK";
+  src: url("{{ '/assets/fonts/crimson-pro.woff2' | relative_url }}?v={{ font_version }}") format("woff2");
+  font-style: normal;
+  font-weight: 200 900;
+  font-display: swap;
+  size-adjust: 106%;
+}
+
+@font-face {
+  font-family: "Crimson Pro CJK";
+  src: url("{{ '/assets/fonts/crimson-pro-italic.woff2' | relative_url }}?v={{ font_version }}") format("woff2");
+  font-style: italic;
+  font-weight: 200 900;
+  font-display: swap;
+  size-adjust: 106%;
+}
+
+@font-face {
+  font-family: "Ubuntu Mono Local";
+  src: url("{{ '/assets/fonts/ubuntu-mono.woff2' | relative_url }}?v={{ font_version }}") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Serif SC Local";
+  src:
+    url("{{ '/assets/fonts/noto-serif-sc-site-v1.woff2' | relative_url }}?v={{ font_version }}") format("woff2"),
+    url("{{ '/assets/fonts/noto-serif-sc-full.ttf' | relative_url }}?v={{ font_version }}") format("truetype");
+  font-style: normal;
+  font-weight: 200 900;
+  font-display: swap;
+  unicode-range: U+2E80-2EFF, U+3000-303F, U+31C0-31EF, U+3400-4DBF, U+4E00-9FFF, U+F900-FAFF, U+FF00-FFEF;
+}
+
+@font-face {
+  font-family: "Qingniao JianKai Local";
+  src:
+    url("{{ '/assets/fonts/qingniao-jiankai-site-v1.woff2' | relative_url }}?v={{ font_version }}") format("woff2"),
+    url("{{ '/assets/fonts/qingniao-jiankai-full.ttf' | relative_url }}?v={{ font_version }}") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  unicode-range: U+2E80-2EFF, U+3000-303F, U+31C0-31EF, U+3400-4DBF, U+4E00-9FFF, U+F900-FAFF, U+FF00-FFEF;
+}
+
+@font-face {
+  font-family: "Liu Gong Quan Profile Web";
+  src:
+    url("{{ '/assets/fonts/liu-gong-quan-profile-v1.woff2' | relative_url }}?v={{ font_version }}") format("woff2"),
+    url("{{ '/assets/fonts/liu-gong-quan-full.ttf' | relative_url }}?v={{ font_version }}") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  unicode-range: U+2E80-2EFF, U+3000-303F, U+31C0-31EF, U+3400-4DBF, U+4E00-9FFF, U+F900-FAFF, U+FF00-FFEF;
+}

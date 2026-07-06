@@ -13,6 +13,11 @@
 {% seo %}
 {% assign asset_version = site.time | date: '%s' %}
 <link rel="icon" href="{{ '/assets/images/mologo.png' | relative_url }}">
+{% assign document_lang = page.lang | default: site.lang | default: 'en-US' %}
+{% if document_lang == 'zh-CN' %}
+<link rel="preload" href="{{ '/assets/fonts/liu-gong-quan-profile-v1.woff2' | relative_url }}?v={{ asset_version }}" as="font" type="font/woff2" crossorigin>
+{% endif %}
+<link rel="stylesheet" href="{{ '/assets/stylesheets/font.css' | relative_url }}?v={{ asset_version }}">
 <link rel="stylesheet" href="{{ '/assets/stylesheets/main.css' | relative_url }}?v={{ asset_version }}">
 <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | absolute_url }}">
 {% if page.layout == 'post' %}
